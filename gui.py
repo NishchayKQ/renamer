@@ -122,7 +122,7 @@ def returnSortedTupleOfTimeAndFile() -> tuple[list[tuple[float, str, str | None]
     listOfFilesForEachExtenion: dict[str, list] = {"folders": []}
     pwd = os.getcwd()
     shouldMatch = None
-    fileExtPattern = re.compile(r".+\.(\w+)$")
+    fileExtPattern = re.compile(r".*\.(\w+)$")
     if (Options.currentSettings[Keys.RENAME_DIRECTORY].value
             and not Options.currentSettings[Keys.RENAME_HIDDEN_DIRECTORY].value):
         shouldMatch = re.compile(r"^\.")
